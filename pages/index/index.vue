@@ -9,8 +9,8 @@
 		<!-- 抽屉组件 -->
 		<view class="drawer">
 			<unidrawer @drawerStatus="getDrawerStatus" ref="draw" :mask="mask" :width="drawWid" :mode='mode'>
-				<view style="padding:30rpx;z-index:9999">
-					<view class="uni-title">抽屉式导航</view>
+				<view style="z-index:9999">
+					<!-- <view class="uni-title">抽屉式导航</view> -->
 				</view> 
 			</unidrawer>
 		</view>

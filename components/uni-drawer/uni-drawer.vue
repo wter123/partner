@@ -3,6 +3,7 @@
 		<view class="uni-drawer__mask" :class="{ 'uni-drawer__mask--visible': showDrawer && mask }" @tap="close('mask')" />
 		<view class="uni-drawer__content" :class="{'uni-drawer--right': rightMode,'uni-drawer--left': !rightMode, 'uni-drawer__content--visible': showDrawer}" :style="{width:drawerWidth}">
 			<slot />
+		<button type="default" @click="skipPage">登录</button>
 		</view>
 	</view>
 </template>
@@ -58,7 +59,8 @@
 				showDrawer: false,
 				rightMode: false,
 				watchTimer: null,
-				drawerWidth: "50%"
+				drawerWidth: "50%",
+				forcedLogin:false
 			}
 		},
 		created() {
@@ -68,6 +70,32 @@
 			this.rightMode = this.mode === 'right'
 		},
 		methods: {
+			univerifyLogin(){
+				return false
+			},
+			skipPage(){
+				// uni.navigateTo({
+				// 	url: '../../pages/login/login',
+				// });
+				
+				
+				if (!this.forcedLogin){
+									uni.showModal({
+					title: '未登录',
+					content: '您未登录，需要登录后才能继续',
+					success: (res) => {
+						if (res.confirm) {
+							uni.navigateTo({
+								url: '../../pages/login/login',
+							});
+						}
+					}
+				});
+				}
+
+				
+				
+			},
 			clear(){},
 			close(type) {
 				console.log(this.maskClick)
