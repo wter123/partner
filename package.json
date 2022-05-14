@@ -1,0 +1,14 @@
+{
+    "name": "waiye",
+    "version": "1.0.0",
+    "main": "main.js",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "leaflet": "^1.7.1"
+    }
+}
