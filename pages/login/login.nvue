@@ -130,7 +130,7 @@
 						//self.getUni(Object.assign(infoRes));
 					},
 					fail: function (e) {
-						console.log('3333333333',e);
+						console.log('3333333333');
 					},
 					complete: function () {
 						console.log('44444444444444');

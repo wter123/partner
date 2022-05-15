@@ -4,6 +4,7 @@
 		<view class="uni-drawer__content" :class="{'uni-drawer--right': rightMode,'uni-drawer--left': !rightMode, 'uni-drawer__content--visible': showDrawer}" :style="{width:drawerWidth}">
 			<slot />
 		<button type="default" @click="skipPage">登录</button>
+		<button type="default" @click="userLocation">用户位置</button>
 		</view>
 	</view>
 </template>
@@ -72,6 +73,11 @@
 		methods: {
 			univerifyLogin(){
 				return false
+			},
+			userLocation(){
+				uni.navigateTo({
+					url: '/components/userLocation/index',
+				});
 			},
 			skipPage(){
 				// uni.navigateTo({

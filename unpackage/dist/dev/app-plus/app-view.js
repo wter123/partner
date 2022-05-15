@@ -140,6 +140,7 @@ if (uni.restoreGlobal) {
 }
 __definePage('pages/index/index', function () {return Vue.extend(__webpack_require__(/*! pages/index/index.vue?mpType=page */ 2).default);});
 
+
 __definePage('components/map/index', function () {return Vue.extend(__webpack_require__(/*! components/map/index.vue?mpType=page */ 49).default);});
 
 /***/ }),
@@ -1291,6 +1292,18 @@ var render = function() {
                   }
                 },
                 [_vm._v("登录")]
+              ),
+              _c(
+                "v-uni-button",
+                {
+                  attrs: { type: "default", _i: 5 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("用户位置")]
               )
             ],
             2

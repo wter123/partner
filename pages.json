@@ -33,6 +33,14 @@
 	        }
 	        
 	    },{
+	        "path" : "components/userLocation/index",
+	        "style" :                                                                                    
+	        {
+	            "navigationBarTitleText": "",
+	            "enablePullDownRefresh": false
+	        }
+	        
+	    },{
             "path" : "components/map/index",
             "style" :                                                                                    
             {
